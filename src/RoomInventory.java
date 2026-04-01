@@ -3,19 +3,19 @@ import java.util.HashMap;
 /**
  * RoomInventory - Manages centralized room availability
  * 
- * @version 3.0
+ * @version 6.0
  */
 public class RoomInventory {
 
     private HashMap<String, Integer> inventory;
 
-    // Constructor initializes inventory
     public RoomInventory() {
         inventory = new HashMap<>();
 
-        inventory.put("Single Room", 5);
-        inventory.put("Double Room", 3);
-        inventory.put("Suite Room", 2);
+        // 🔥 Limited inventory (for testing UC6 rejection logic)
+        inventory.put("SINGLE", 2);
+        inventory.put("DOUBLE", 1);
+        inventory.put("SUITE", 1);
     }
 
     // Get availability
@@ -28,7 +28,7 @@ public class RoomInventory {
         inventory.put(roomType, count);
     }
 
-    // Display inventory
+    // Display inventory (needed for UC3)
     public void displayInventory() {
         System.out.println("---- Room Inventory ----\n");
 
